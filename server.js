@@ -28,7 +28,6 @@ mongoose.connect(mongoUrl,
             console.log('connected');
         }
     });
-//mongoose.set('useCreateIndex', true);
 
 
 const date = new Date().getFullYear();
