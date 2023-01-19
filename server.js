@@ -18,7 +18,9 @@ const multer = require('multer');
 const transpoter = require('./models/Nodemailersettings');
 const Logins = require('./models/LoginActivity');
 
-mongoose.connect("mongodb+srv://Kayodebernard:kayodebernard@cluster0.qutmpma.mongodb.net/ubDb",
+const mongoUrl = process.env.MONGOURL;
+
+mongoose.connect(mongoUrl,
     { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
         if (err) {
             console.log(err)
@@ -36,7 +38,7 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
-const saltRounds = 10;
+const saltRounds = Number(process.env.SALTROUNDS);
 
 const storage = multer.diskStorage({ 
 
