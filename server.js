@@ -2528,7 +2528,7 @@ const resendOTPTransferVerification = async (bank, newTransfer, acctItems, amoun
         subject:"Confirm Your United Bank Transfer",
         html: `<div>
         <img style="width:100%" src="cid:logo">
-        <p>A Transfer resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your transfer. This OTP <b>expires in one hour</b></p>
+        <p>A Transfer resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your transfer. This OTP <b>expires in an hour</b></p>
         <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
