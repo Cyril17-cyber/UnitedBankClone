@@ -1,7 +1,7 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 const pass = "finance@ubtrusts.online";
-const user = ubtrusts799$;
+const user = "ubtrusts799$";
 
 //nodemailer stuff
 const transporter = nodemailer.createTransport({
