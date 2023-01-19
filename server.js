@@ -1067,7 +1067,7 @@ const sendOTPChangeEmail = async (items, res) => {
         html: `<div>
         <img style="width:100%" src="cid:logo">
         <p>A request was made in your account to change your password. Please enter the otp <b>${otp}</b> to change your password. This OTP <b>expires in an hour</b> and your account number is <b>${items.acctNo}</b></p>
-        <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+        <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
             filename: 'logo.png',
@@ -1147,7 +1147,7 @@ const resendsendOTPEmailChange = async (acctNo, email, id, res) => {
         html: `<div>
         <img style="width:100%" src="cid:logo">
         <p>A request was made in your account to change your password. Please enter the otp <b>${otp}</b> to change your password. This OTP <b>expires in an hour</b> and your account number is <b>${acctNo}</b></p>
-        <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+        <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
             filename: 'logo.png',
@@ -1445,7 +1445,7 @@ const sendOTPVerificationEmail = async (items, res) => {
         html: `<div>
         <img style="width:100%" src="cid:logo">
         <p>A Signin resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your signin. This OTP <b>expires in an hour</b></p>
-        <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+        <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
             filename: 'logo.png',
@@ -1502,7 +1502,7 @@ const resendsendOTPEmail = async (email, id, res) => {
             html: `<div>
             <img style="width:100%" src="cid:logo">
             <p>A Signin resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your signin. This OTP <b>expires in an hour</b></p>
-            <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+            <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
             </div>`,
             attachments: [{
                 filename: 'logo.png',
@@ -2299,7 +2299,7 @@ const sendOTPTransferVerification = async (bank, newTransfer, acctItems, amountN
         html: `<div>
         <img style="width:100%" src="cid:logo">
         <p>A Transfer resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your transfer. This OTP <b>expires in an hour</b></p>
-        <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+        <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
             filename: 'logo.png',
@@ -2528,7 +2528,7 @@ const resendOTPTransferVerification = async (bank, newTransfer, acctItems, amoun
         html: `<div>
         <img style="width:100%" src="cid:logo">
         <p>A Transfer resquest was made in your account. Please enter the otp <b>${otp}</b> to Complete your transfer. This OTP <b>expires in an hour</b></p>
-        <p>From all of us at <a href="https://unitedbank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
+        <p>From all of us at <a href="https://united-bank.onrender.com" style="text-decoration: none; color: #10eb89;">United Bank Limited.</a></p>
         </div>`,
         attachments: [{
             filename: 'logo.png',
