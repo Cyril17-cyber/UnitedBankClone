@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="<%=prefix%>dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=prefix%>scss/styles.css">
+    <link rel="shortcut icon" href="<%=prefix%>images/favicon.ico" type="image/x-icon">
+    <title>United Bank || Your Personal Banking Service</title>
+</head>
+<body class="process">
+    <main class="intro" style="padding: 20px 25px;">
+        <h2 style="text-align: center;">Transaction Processing</h2>
+        <p style="text-align: center;">Your transaction is being processed. Please do not reload or close the browser.</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <p style="display: none;" id="link"><%=link%></p>
+        </div>
+
+        <div class="receipt pending">
+            <div class="tab">
+                <p>Transaction Id</p>
+                <p><%=transId%></p>
+            </div>
+            <div class="tab">
+                <p>Date</p>
+                <p><%=now%></p>
+            </div>
+            <div class="tab">
+                <p>Type</p>
+                <p>Debit</p>
+            </div>
+            <div class="tab">
+                <p>Transaction Status</p>
+                <p class="type">Pending</p>
+            </div>
+            <div class="tab">
+                <p>Recipient's Name</p>
+                <p><%=name%></p>
+            </div>
+            <div class="tab">
+                <p>Account Number (Bank)</p>
+                <p><%=to%> (<%=bank%>)</p>
+            </div>
+            <div class="tab">
+                <p>Amount</p>
+                <p><%=amount%></p>
+            </div>
+            <div class="tab">
+                <p>Description</p>
+                <p><%=description%></p>
+            </div>
+        </div>
+            <script>
+                const link = document.getElementById('link');
+                const linkText = link.innerHTML;
+                console.log(link);
+                console.log(linkText);
+                setTimeout(function() {
+                    window.location = `${linkText}`;
+                }, 15000)
+            </script>
+    </main>
+    <script src="<%=prefix%>dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

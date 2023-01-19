@@ -1,0 +1,64 @@
+<%-include('partials/header')-%>
+
+<div class="contact">
+    <div class="contact-banner">
+        <div class="texts"><p>Contact Us</p>
+            <h2>We're Here for You</h2></div>
+            <div class="empty"></div>
+    </div>
+
+    <div class="contact-intro">
+        <h1>Contact Us</h1>
+        <h4>We're here for you.</h4>
+        <p>At United Bank, we’re dedicated to providing exceptional customer service. Whether it's a lost check card or questions about refinancing your home, feel free to reach out to us at any time, via phone, e-mail, or 24/7 online. We’ll do all we can to help and won’t rest until your questions are answered, or your problems are resolved.
+        </p>
+    </div>
+
+    <form class="contact-form" action="/contact" method="post">
+        <h1>Email Us</h1>
+        <p>United Bank is very interested in your comments and inquiries.</p>
+        <p>This email is monitored Monday through Friday 8:30 a.m. to 5:00 p.m. Please fill out the form below, and we will get back to you as soon as possible.</p>
+        <main>
+            <div class="input">
+                <label for="fName">First Name*</label>
+                <input type="text" name="fName" id="" required>
+            </div>
+
+            <div class="input">
+                <label for="lName">Last Name*</label>
+                <input type="text" name="lName" id="" required>
+            </div>
+
+            <div class="input">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="" required>
+            </div>
+
+            <div class="input">
+                <label for="reason">Reason For Inquiry</label>
+                <select name="reason" id="" required>
+                    <option value="Personal Products/Services">Personal Products/Services</option>
+                    <option value="Business Products/Services">
+                        Business Products/Services
+                    </option>
+                    <option value="Brokerage Products/Services">
+                        Brokerage Products/Services
+                    </option>
+                    <option value="Wealth Management Products/Services">
+                        Wealth Management Products/Services
+                    </option>
+                    <option value="Other">
+                        Other
+                    </option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="message">Message*</label>
+                <textarea name="message" id="" cols="30" rows="5" required></textarea>
+            </div>
+        </main>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<%-include('partials/footer')-%>

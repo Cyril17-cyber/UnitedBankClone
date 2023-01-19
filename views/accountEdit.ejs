@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="<%=prefix%>dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%=prefix%>scss/styles.css">
+        <link rel="shortcut icon" href="<%=prefix%>images/favicon.ico" type="image/x-icon">
+        <title>United Bank || Your Personal Banking Service</title>
+    </head>
+<body>
+    <div class="form-intro">
+        <img class="mb-4" src="<%=prefix%>images/logo.png" alt="logo" height="70">
+        <h1><%=message%></h1>
+    </div>
+    <form class="newForm" action="/admin-edit-user/<%=account._id%>" method="post">
+        <h2>Personal Information</h2>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title <span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Mr/Mrs/Miss" required id="title" value="<%=account.title%>">
+        </div>
+            <div class="mb-3">
+                <label for="fName" class="form-label">First Name <span>*</span></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="fName" required id="fName" value="<%=account.firstName%>">
+            </div>
+
+            <div class="mb-3">
+                <label for="fName" class="form-label">Middle Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mName" value="<%=account.middleName%>">
+            </div>
+
+            <div class="mb-3">
+                <label for="fName" class="form-label">Last Name <span>*</span></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="LName" required value="<%=account.lastName%>">
+            </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone <span>*</span></label>
+            <input type="tel" class="form-control" id="exampleInputPassword1" name="phone" required value="<%=account.mobileNo%>">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Date Of Birth <span>*</span></label>
+            <input type="date" class="form-control" id="exampleInputPassword1" name="dob" required value="<%=account.dob%>">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Nationality <span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="nationality" required value="<%=account.nationality%>">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Residential Address <span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="city"  placeholder="City" required value="<%=account.city%>">
+          </div>
+
+          <div class="mb-3"><input type="text" class="form-control" id="exampleInputPassword1" name="state"  placeholder="State" required value="<%=account.state%>"></div>
+          <div class="mb-3"><input type="text" class="form-control" id="exampleInputPassword1" name="country"  placeholder="Country" required value="<%=account.country%>"></div>
+          
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="<%=prefix%>dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=prefix%>scss/styles.css">
+    <link rel="shortcut icon" href="<%=prefix%>images/favicon.ico" type="image/x-icon">
+    <title>United Bank || Your Personal Banking Service</title>
+</head>
+<body id="dash-body" class="dash-body">
+      <form action="/logout" method="post" class="popUp">
+        <h3>Proceed To Logout?</h3>
+        <p>Are you sure about this?</p>
+        <div class="buttons">
+            <a href="#" id="cancelBtn">Cancel</a>
+            <button type="submit">Yes</button>
+        </div>
+        </form>
+<div class="dash-main">
+  <div class="dash-side d-flex flex-column flex-shrink-0 p-3 text-bg-dark">
+    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none top">
+      <i class="fa fa-times" id="close"></i>
+      <img src="<%=prefix%>images/logo.png" alt="logo" style="width: 90px; margin-right: 25px;" class="dash-logo">
+      
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <div class="tab mb-3 mb-md-0 text-white">
+      <p>AVAILABE BALANCE</p>
+      <div class="d-flex">
+        <h2><%=balance%></h2><span>USD</span>
+      </div>
+      <div class="links d-flex align-items-center">
+        <a href="/dashboard/<%=account._id%>" class="text-white text-decoration-none">DASHBOARD</a>
+      <a href="/transactions/<%=account._id%>" class="text-white text-decoration-none">HISTORY</a>
+      </div>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="/dashboard/<%=account._id%>" class="nav-link text-white <%=navDash%>" aria-current="page">
+          <i class="fa fa-home" width="16" height="16"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/beneficiaries/<%=account._id%>" class="nav-link text-white <%=navBen%>">
+            <i class="fa fa-users" width="16" height="16"></i>
+          Beneficiaries
+        </a>
+      </li>
+      <li>
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between">
+          <i class="fa fa-exchange" width="16" height="16"></i>
+          Transfer Fund
+          <i class="fa fa-chevron-down" width="16" height="16"></i>
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="margin-left: 1.1rem;">
+            <li><a href="/transfer-ub/<%=account._id%>" class="link-dark d-inline-flex text-decoration-none rounded text-white nav-link"><i class="fa fa-asterisk" width="16" height="16"></i> United Bank</a></li>
+            <li><a href="/transfer-local/<%=account._id%>" class="link-dark d-inline-flex text-decoration-none rounded text-white nav-link"><i class="fa fa-asterisk" width="16" height="16"></i> Local Transfer</a></li>
+            <li><a href="/transfer-inter/<%=account._id%>" class="link-dark d-inline-flex text-decoration-none rounded text-white nav-link"><i class="fa fa-asterisk" width="16" height="16"></i> International Transfer</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="/transactions/<%=account._id%>" class="nav-link text-white <%=navTransc%>">
+            <i class="fa fa-history" width="16" height="16"></i>
+          Transactions
+        </a>
+      </li>
+      <li>
+        <a href="/statement/<%=account._id%>" class="nav-link text-white <%=navState%>">
+            <i class="fa fa-file-text-o" width="16" height="16"></i>
+          Account Statement
+        </a>
+      </li>
+      <li>
+        <a href="/support/<%=account._id%>" class="nav-link text-white <%=navSup%>">
+            <i class="fa fa-question-circle" width="16" height="16"></i>
+          Support
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="data:account/<%=account.img.contentType%>;base64, 
+
+        <%=account.img.data.toString('base64')%>" alt="profile" width="32" height="32" class="rounded-circle me-2">
+        <strong><%=account.firstName%> <%=account.lastName%></strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+        <li><a class="nav-link" href="#" id="google_translate_element"></a></li>
+        <li><a class="dropdown-item" href="/account/<%=account._id%>">Account</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item signOutBtn" href="#">Sign out</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement (
+                {pageLanguage: 'en'}, 
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+      <main class="dash">
+        <div class="top">
+            <div class="left">
+                <i id="open" class="fa fa-bars"></i>
+                <img src="<%=prefix%>images/logo.png" class="logo" alt="logo">
+            </div>
+              <div class="dropdown">
+                <a style="color: #000 !important;" href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="data:account/<%=account.img.contentType%>;base64, 
+          
+                  <%=account.img.data.toString('base64')%>" alt="profile" width="32" height="32" class="rounded-circle me-2">
+                  <strong><%=account.firstName%> <%=account.lastName%></strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                  <li><a class="nav-link" href="#" id="google_translate_element"></a></li>
+                  <li><a class="dropdown-item" href="/account/<%=account._id%>">Account</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item signOutBtn" href="#">Sign out</a></li>
+                </ul>
+              </div>
+        </div>

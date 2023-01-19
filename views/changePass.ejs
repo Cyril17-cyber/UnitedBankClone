@@ -1,0 +1,15 @@
+<%-include('partials/header')-%>
+<div class="form-intro">
+    <img class="mb-4" src="<%=prefix%>images/logo.png" alt="logo" height="70">
+    <h1><%=message%></h1>
+</div>
+<form class="newForm" action="/change" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">New Password<span>*</span></label>
+        <input type="password" class="form-control" aria-describedby="emailHelp" name="password" placeholder="New Password" required id="email">
+        <input type="hidden" name="email" value="<%=email%>">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<script src="js/script.js"></script>
+<%-include('partials/footer')-%>

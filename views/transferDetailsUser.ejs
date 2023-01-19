@@ -1,0 +1,22 @@
+<%-include('partials/dashNav')-%>
+
+<div class="userAdmin">
+    <% if(transfer.length == 0) { %>
+        <h2>🌚🌚 Nothing To See Here... <a href="/">Head back home</a></h2>
+        <% } else { %>
+            <div class="user">
+                <h2>Transaction Details</h2>
+                <div class="detail"><p>Transaction Type:</p> <h3><%=transfer.transactionType%></h3></div>
+                <div class="detail"><p>Sender's Account:</p> <h3><%=transfer.from%></div>
+            <div class="detail"><p>Recipient's Account:</p> <h3><%=transfer.to%></h3></div>
+            <div class="detail"><p>Recipient's Bank:</p> <h3><%=transfer.bank%></div>
+            <div class="detail"><p>Amount:</p> <h3>$ <%=Transbalance%></h3></div>
+            <div class="detail"><p>Description:</p> <h3><%=transfer.description%></h3></div>
+            <div class="detail"><p>Date:</p> <h3><%=transfer.date%></h3></div>
+            
+            </div>
+        <% } %>
+</div>
+</main>
+</div>
+<%-include('partials/dashFooter')-%>

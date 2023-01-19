@@ -1,0 +1,127 @@
+<%-include('partials/header')-%>
+
+<div class="landing">
+    <div class="banner">
+        <div class="banner-content">
+          <form action="/login" method="post" class="bannerForm" id="bannerForm">
+            <div class="top">
+              <i class="fa fa-lock"></i>
+              <h2>Secure Sign-In</h2>
+              <i class="fa fa-chevron-right" id="form-chevron"></i>
+            </div>
+  
+            <main>
+              <input type="text" name="userId" id="acctNo" placeholder="Account Number">
+            <input type="password" name="password" id="password" placeholder="password">
+            <input type="hidden" name="platDes" id="platDes">
+  
+            <button type="submit">SIGN IN</button>
+  
+            <a href="/forgot">Forgot Account Number or Password?</a>
+            </main>
+          </form>
+  
+          <div class="intro">
+            <h1>United Bank Group</h1>
+            <p>An account for everyone free and easy to access anytime, anywhere.</p>
+            <a href="/about">LEARN MORE</a>
+          </div>
+          <div class="empty"></div>
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <section class="onboarding">
+      <div class="onboarding-detail">
+        <img src="images/ub-community.png" alt="image">
+        <div class="texts">
+          <h3>United With the Community</h3>
+          <p>See how our markets demonstrate a commitment to their local communities.</p>
+          <a href="/about">LEARN MORE</a>
+        </div>
+      </div>
+
+      <div class="onboarding-detail">
+        <img src="images/custom-alerts-homepage-tile-final.jpeg" alt="image">
+        <div class="texts">
+          <h3>Never Miss a Beat With Custom Alerts</h3>
+          <p>Custom Alerts are easy to set up and will allow you to track your account activity whenever and wherever you are.</p>
+          <a href="/about">LEARN MORE</a>
+        </div>
+      </div>
+
+      <div class="onboarding-detail">
+        <img src="images/smart-529.jpeg" alt="image">
+        <div class="texts">
+          <h3>Start Planning for College</h3>
+          <p>See what a tax-advantaged college savings plan could mean for you.</p>
+          <a href="/about">LEARN MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="intro">
+        <h2>FAQS</h2>
+        <p>Here our list of frequently asked questions if you're stuck</p>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              How Do I Create An Account?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              To get started is pretty easy. Just go ahead and click on the <a href="/register">Register</a> tab, fill out all the required details and wait for a response from our team.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Why Do I Need To Confirm My Identity?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              In order to move on to the next registration step to get your account fully working, we'd need to to send over some files so we can confirm the identity of whom the account is to belong to. During this stage, once your files have been sent in, it will be checked by our team and if your registration is being greenlit, your account would be open and free to use.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              What Do I Do After Verification?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              After your identity has been verified, the account of your choosing would be created and your login credentials would sent to you via secure means.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="more">
+      <div class="more-texts">
+        <h1>Are You on Track to Meet Your Goals?</h1>
+        <p>
+          It's easy to see if you are saving enough. Whether it's for a vacation, new car, new home or if you need to build an emergency fund, our <strong>savings and budgeting calculators</strong> can help you reach your savings goals.
+        </p>
+        <a href="/register">GET STARTED</a>
+      </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script type='text/javascript' src='js/platform.js'></script>
+    <script type='text/javascript'>
+        document.getElementById("platDes").value = platform.description;
+
+    </script>
+
+
+<%-include('partials/footer')-%>

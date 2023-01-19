@@ -1,0 +1,85 @@
+<%-include('partials/dashNav')-%>
+<div class="recent">
+    <section>
+        <h4>Recent Transactions</h4>
+        <div class="buttons">
+            <button id="credits" class="active">Credits</button>
+            <button id="debits">Debits</button>
+        </div>
+    <main class="credits">
+        <% to.forEach(transferTo => { %>
+            <a href="/history/<%=transferTo._id%>/<%=account._id%>" class="recent-tab">
+                <section>
+                    <b><%=transferTo.name%></b>
+                    <p><%=transferTo.date%></p>
+                </section>
+                <section>
+                    <b><%=transferTo.bank%></b>
+                    <p><span><%=transferTo.amount%></span> USD</p>
+                </section>
+            </a>
+        <% }); %>
+        <% credits.forEach(credit => { %>
+            <a href="/static/<%=credit.link%>/<%=account._id%>" class="recent-tab">
+                <section>
+                    <b><%=credit.name%></b>
+                    <p><%=credit.date%></p>
+                </section>
+                <section>
+                    <b><%=credit.bank%></b>
+                    <p><span><%=credit.amount%></span> USD</p>
+                </section>
+            </a>
+        <% }); %>
+    </main>
+    <main class="debits none">
+        <% from.forEach(transferFrom => { %>
+            <a href="/history/<%=transferFrom._id%>/<%=account._id%>" class="recent-tab">
+                <section>
+                    <b><%=transferFrom.name%></b>
+                    <p><%=transferFrom.date%></p>
+                </section>
+                <section>
+                    <b><%=transferFrom.bank%></b>
+                    <p><span><%=transferFrom.amount%></span> USD</p>
+                </section>
+            </a>
+        <% }); %>
+        <% debits.forEach(credit => { %>
+            <a href="/staticDeb/<%=credit.link%>/<%=account._id%>" class="recent-tab">
+                <section>
+                    <b><%=credit.name%></b>
+                    <p><%=credit.date%></p>
+                </section>
+                <section>
+                    <b><%=credit.bank%></b>
+                    <p><span><%=credit.amount%></span> USD</p>
+                </section>
+            </a>
+        <% }); %>
+    </main>
+    </section>
+</div>
+</main>
+</div>
+<script>
+    const creditsBtn = document.getElementById("credits");
+    const debitsBtn = document.getElementById("debits");
+    const debits = document.querySelector(".debits");
+    const credits = document.querySelector(".credits");
+
+    creditsBtn.addEventListener('click', ()=> {
+        credits.classList.remove("none");
+        debitsBtn.classList.remove("active");
+        debits.classList.add("none");
+        creditsBtn.classList.add("active");
+    });
+
+    debitsBtn.addEventListener('click', ()=> {
+        debits.classList.remove("none");
+        creditsBtn.classList.remove("active");
+        debitsBtn.classList.add("active");
+        credits.classList.add("none");
+    });
+</script>
+<%-include('partials/dashFooter')-%>

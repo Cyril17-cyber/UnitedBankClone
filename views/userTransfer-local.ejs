@@ -1,0 +1,46 @@
+<%-include('partials/dashNav')-%>
+<div class="intro">
+    <h3><%=message%></h3>
+</div>
+<form class="newForm" action="/transfer-local/<%=account._id%>" method="post">
+    <div class="mb-3">
+        <label for="fName" class="form-label">Sender's Account <span>*</span></label>
+        <input type="text" value="<%=account.accountType%> Account:  <%=account.acctNo%>" class="form-control" id="disabledTextInput" name="account" disabled required>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="fName" class="form-label">Recipient's Account Number <span>*</span></label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="to" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="fName" class="form-label">Recipient's Bank <span>*</span></label>
+        <input type="text" value="" class="form-control" name="bank" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="fName" class="form-label">Recipient's Name <span>*</span></label>
+        <input type="text" class="form-control" name="name" required>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Amount <span>*</span></label>
+        <input type="number" class="form-control" id="exampleInputPassword1" name="amount" required>
+      </div>
+
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Description <span>*</span></label>
+    <textarea cols="30" rows="3" class="form-control" id="exampleInputDesc1" aria-describedby="emailHelp" name="description" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirmation Password <span>*</span></label>
+    <input type="password" class="form-control" id="examplePass1" aria-describedby="emailHelp" name="password" placeholder="Password" required>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</main>
+</div>
+<%-include('partials/dashFooter')-%>

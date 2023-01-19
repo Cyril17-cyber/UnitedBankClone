@@ -1,0 +1,95 @@
+<%-include('partials/header')-%>
+
+<div class="register">
+    <div class="register-banner">
+        <div class="texts"><p>Register With Us</p>
+            <h2>Building a Brighter Future</h2></div>
+            <div class="empty"></div>
+    </div>
+    <form class="newForm" action="/register" method="post" enctype="multipart/form-data">
+        <h1><%=message%></h1>
+        <h2>Personal Information</h2>
+        <div class="mb-3">
+            <label for="image" class="form-label">Profile Image<span>*</span></label>
+            <input type="file" class="form-select" id="exampleInputEmail1" aria-describedby="emailHelp" name="image" required id="image" accept="image/*">
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title<span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Mr/Mrs/Miss" required id="title">
+        </div>
+            <div class="mb-3">
+                <label for="fName" class="form-label">First Name<span>*</span></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="fName" required id="fName">
+            </div>
+
+            <div class="mb-3">
+                <label for="fName" class="form-label">Middle Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mName">
+            </div>
+
+            <div class="mb-3">
+                <label for="fName" class="form-label">Last Name<span>*</span></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="LName" required>
+            </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address <span>*</span></label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone<span>*</span></label>
+            <input type="tel" class="form-control" id="exampleInputPassword1" name="phone" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Date Of Birth<span>*</span></label>
+            <input type="date" class="form-control" id="exampleInputPassword1" name="dob" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Nationality<span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="nationality" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Residential Address<span>*</span></label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="city"  placeholder="City" required>
+          </div>
+
+          <div class="mb-3"><input type="text" class="form-control" id="exampleInputPassword1" name="state"  placeholder="State" required></div>
+          <div class="mb-3"><input type="text" class="form-control" id="exampleInputPassword1" name="country"  placeholder="Country" required></div>
+
+          <h1 class="accountH1">Account Information</h1>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Account Type<span>*</span></label>
+            <select name="actType" class="form-select" id="exampleInputPassword1" required>
+                <option value="Savings">Savings</option>
+                <option value="Current">Current</option>
+                <option value="Fixed Deposit">Fixed Deposit</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <input type="number" class="form-control" id="exampleInputPassword1" name="balance" required placeholder="Available Balance">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password<span>*</span></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password" required placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="Cpassword" required placeholder="Confirm Password">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Year Of Account Creation<span>*</span></label>
+            <input type="number" class="form-control" id="exampleInputPassword1" name="creationYear" required placeholder="Creation Year">
+          </div>
+
+          
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<%-include('partials/footer')-%>

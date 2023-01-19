@@ -1,0 +1,25 @@
+<%-include('partials/header')-%>
+<div class="form-intro">
+    <img class="mb-4" src="<%=prefix%>images/logo.png" alt="logo" height="70">
+    <h1><%=message%></h1>
+</div>
+<form class="newForm" action="/login" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Account No*</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userId" placeholder="Account No" required id="title">
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Password*</label>
+        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" required id="title">
+    </div>
+    <input type="hidden" name="platDes" id="platDes">
+    <div class="link"><a href="/forgot">Forgot Account Number or Password?</a></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<script src="js/script.js"></script>
+<script type='text/javascript' src='js/platform.js'></script>
+    <script type='text/javascript'>
+        document.getElementById("platDes").value = platform.description;
+
+    </script>
+<%-include('partials/footer')-%>

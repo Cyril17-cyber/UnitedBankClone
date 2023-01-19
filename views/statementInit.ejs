@@ -1,0 +1,22 @@
+<%-include('partials/dashNav')-%>
+<div class="intro" style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+    <h3>Generate Account Statement</h3>
+    <form action="/statement/<%=account._id%>" method="post" class="newForm" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="options">
+            <select name="from" class="form-select">
+                <% dates.forEach(date=> { %>
+                    <option value="<%=date%>"><%=date%></option>
+                <% }) %>
+            </select> <span>-</span> 
+            <select name="to" class="form-select">
+                <% dates.forEach(date=> { %>
+                    <option value="<%=date%>"><%=date%></option>
+                <% }) %>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Generate</button>
+    </form>
+</div>
+</main>
+</div>
+<%-include('partials/dashFooter')-%>

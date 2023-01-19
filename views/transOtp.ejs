@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="<%=prefix%>dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=prefix%>scss/styles.css">
+    <link rel="shortcut icon" href="<%=prefix%>images/favicon.ico" type="image/x-icon">
+    <title>United Bank || Your Personal Banking Service</title>
+</head>
+<body>
+    <body>
+        <div class="form actionForm">
+            <div class="top">
+                <img src="<%=prefix%>images/logo.png" alt="logo">
+                <div class="message">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <p><%=message%></p>
+                </div>
+            </div>
+            <main>
+                <form action="<%=route%>" class="otpForm" method="post">
+                    <div class="input">
+                        <label for="password">OTP</label>
+                        <input type="number" name="otp" id="password" placeholder="Input OTP" required>
+                        <input type="hidden" name="to" value="<%=to%>">
+                        <input type="hidden" name="name" value="<%=name%>">
+                        <input type="hidden" name="transactionType" value="<%=transactionType%>">
+                        <input type="hidden" name="id" value="<%=id%>">
+                        <input type="hidden" name="amount" value="<%=amount%>">
+                        <input type="hidden" name="description" value="<%=description%>">
+                        <input type="hidden" name="now" value="<%=now%>">
+                        <input type="hidden" name="bank" value="<%=bank%>">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+        
+                <form action="<%=resendRoute%>" method="post">
+                    <input type="hidden" name="to" value="<%=to%>">
+                    <input type="hidden" name="name" value="<%=name%>">
+                    <input type="hidden" name="transactionType" value="<%=transactionType%>">
+                    <input type="hidden" name="id" value="<%=id%>">
+                    <input type="hidden" name="amount" value="<%=amount%>">
+                    <input type="hidden" name="description" value="<%=description%>">
+                    <input type="hidden" name="now" value="<%=now%>">
+                    <input type="hidden" name="bank" value="<%=bank%>">
+                        <h5 style="text-align: center;">Didn't get an email? Check your spam folder or <button type="submit" class="resend">Send again</button></h5>
+                </form>
+                </div>
+            </main>
+    </body>
+</body>
+</html>
