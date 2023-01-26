@@ -1459,6 +1459,11 @@ footer .copy {
   color: #9f9f9f;
 }
 
+footer .copy a {
+  color: #9f9f9f;
+  font-weight: 800;
+}
+
 @media (max-width: 900px) {
   .banner {
     display: block;
